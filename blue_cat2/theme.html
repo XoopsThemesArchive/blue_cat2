@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="<{$xoops_charset}>"?><{strip}>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta http-equiv="content-script-type" content="text/javascript" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta name="robots" content="<{$xoops_meta_robots|upper}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<link rev="made" href="mailto:contact@suin.jp" />
+<link rel="start" title="<{$xoops_sitename}>" href="<{$xoops_url}>/default.htm" />
+<link rel="shortcut icon" href="<{$xoops_url}>/favicon.ico" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="screen,tv" href="<{$xoops_themecss}>" />
+<link rel="alternate" type="application/rss+xml" title="RSS2.0" href="<{$xoops_url}>/backend.php" />
+
+<script language="JavaScript">
+<!--
+
+function SymError()
+{
+  return true;
+}
+
+window.onerror = SymError;
+
+var SymRealWinOpen = window.open;
+
+function SymWinOpen(url, name, attributes)
+{
+  return (new Object());
+}
+
+window.open = SymWinOpen;
+
+//-->
+</script>
+
+<script type="text/javascript"><{$xoops_js|regex_replace:"../../(/-/->|<!\-\-)/":""}></script>
+<{$xoops_module_header}>
+<{$xoops_block_header}>
+</head>
+<body>
+<div align="center">
+<table id="bodyTable" summary="body table">
+  <tbody>
+
+    <tr>
+      <td colspan="2" id="bodyTop">
+      <div><a href="<{$xoops_url}>"><img src="<{$xoops_imageurl}>title2.png" width="220" height="40" border="0" alt="<{$xoops_sitename}>" /></a></div>
+      <div id="topMenu">
+        <a href="<{$xoops_url}>"><img src="<{$xoops_imageurl}>home.png" width="60" height="13" border="0" alt="ホーム" /></a>
+        <img src="<{$xoops_imageurl}>div.png" width="20" height="13" border="0" alt="" />
+        <a href="<{$xoops_url}>/modules/new/default.htm"><img src="<{$xoops_imageurl}>news.png" width="58" height="13" border="0" alt="新着情報" /></a>
+        <img src="<{$xoops_imageurl}>div.png" width="20" height="13" border="0" alt="" />
+        <a href="<{$xoops_url}>/modules/korean1/default.htm"><img src="<{$xoops_imageurl}>korean.png" width="77" height="13" border="0" alt="韓国語" /></a>
+        <img src="<{$xoops_imageurl}>div.png" width="20" height="13" border="0" alt="" />
+        <a href="<{$xoops_url}>/modules/xoops/default.htm"><img src="<{$xoops_imageurl}>xoops.png" width="65" height="13" border="0" alt="XOOPS" /></a>
+        <img src="<{$xoops_imageurl}>div.png" width="20" height="13" border="0" alt="" />
+        <a href="<{$xoops_url}>/modules/weblog/default.htm"><img src="<{$xoops_imageurl}>blog.png" width="53" height="13" border="0" alt="ブログ" /></a>
+      </div>
+
+      <{include_php file="$xoops_rootpath/themes/blue_cat2/ex_assign.php"}> 
+
+      <{if $ex_moduledir == "weblog"}>
+        <img src="<{$xoops_imageurl}>sky.jpg" width="580" height="200" border="0" alt="" />
+      <{elseif $ex_moduledir == "xoops" || $ex_moduledir == "mydownloads"}>
+        <img src="<{$xoops_imageurl}>xoops.jpg" width="580" height="200" border="0" alt="" />
+      <{elseif $ex_moduledir == "korean1"}>
+        <img src="<{$xoops_imageurl}>korean.jpg" width="580" height="200" border="0" alt="" />
+      <{else}>
+        <img src="<{$xoops_imageurl}>topphoto.jpg" width="580" height="200" border="0" alt="" />
+      <{/if}>
+      </td>
+    </tr>
+
+    <{if $xoops_requesturi == "/" or $xoops_requesturi|regex_replace:"/index\.php.*/":"" == "/"}>
+
+    <tr>
+      <td id="topLeft">
+      <{foreach item=block from=$xoops_clblocks}>
+        <{if $block.title|regex_replace:"/.*none.*/":"none" ne "none"}>
+        <div><{$block.title}></div>
+        <{/if}>
+        <div><{$block.content}></div>
+      <{/foreach}>
+      </td>
+      <td id="topRight">
+      <{foreach item=block from=$xoops_crblocks}>
+        <{if $block.title|regex_replace:"/.*none.*/":"none" ne "none"}>
+        <div><{$block.title}></div>
+        <{/if}>
+        <div><{$block.content}></div>
+      <{/foreach}>
+      </td>
+    </tr>
+
+    <{else}>
+
+    <tr>
+      <td id="bodyLeft">
+      <{foreach item=block from=$xoops_lblocks}>
+        <{if $block.title|regex_replace:"/.*none.*/":"none" ne "none"}>
+        <div class="blockTitle"><{$block.title}></div>
+        <{/if}>
+        <div class="blockContent"><{$block.content}></div>
+      <{/foreach}>
+      </td>
+      <td id="bodyRight">
+        <{foreach item=block from=$xoops_clblocks}>
+        <div><{$block.content}></div>
+        <{/foreach}>
+        <{$xoops_contents}>
+      </td>
+    </tr>
+
+    <{/if}>
+
+    <tr>
+      <td colspan="2" id="bodyFooter"><{$xoops_footer}></td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+</body>
+</html>
+<{/strip}>
+<script language="JavaScript">
+<!--
+var SymRealOnLoad;
+var SymRealOnUnload;
+
+function SymOnUnload()
+{
+  window.open = SymWinOpen;
+  if(SymRealOnUnload != null)
+     SymRealOnUnload();
+}
+
+function SymOnLoad()
+{
+  if(SymRealOnLoad != null)
+     SymRealOnLoad();
+  window.open = SymRealWinOpen;
+  SymRealOnUnload = window.onunload;
+  window.onunload = SymOnUnload;
+}
+
+SymRealOnLoad = window.onload;
+window.onload = SymOnLoad;
+
+//-->
+</script>
+
